@@ -1,21 +1,45 @@
 package typeface.ecommerce.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Table
 @Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Products {
-	
+	@Id
+    @NotNull
+    @Column(name = "product_id")
+    private int product_id;
+
+    @Column(name = "product_name")
+    @NotNull
+    private String product_name;
+
+	@Column(name = "product_price")
+    @NotNull
+    private Double product_price;
+
+    @Column(name = "product_gist")
+    private String product_brief;
+
+    @Column(name = "prod_desc")
+    @NotNull
+    private String prodDescription;
+    
+    public Products() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+    
+    public Products(int i, String string, double d, String string2, String string3) {
+		// TODO Auto-generated constructor stub
+    	this.product_id = i;
+    	this.product_name = string;
+    	this.product_price = d;
+    	this.product_brief = string2;
+    	this.prodDescription = string3;
+	}
+    
     public int getProduct_id() {
 		return product_id;
 	}
@@ -55,38 +79,4 @@ public class Products {
 	public void setProdDescription(String prodDescription) {
 		this.prodDescription = prodDescription;
 	}
-
-	public Products(int i, String string, double d, String string2, String string3) {
-		// TODO Auto-generated constructor stub
-    	this.product_id = i;
-    	this.product_name = string;
-    	this.product_price = d;
-    	this.product_brief = string2;
-    	this.prodDescription = string3;
-	}
-
-	@Id
-    @NotNull
-    @Column(name = "product_id")
-    private int product_id;
-
-    @Column(name = "product_name")
-    @NotNull
-    private String product_name;
-
-    public Products() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	@Column(name = "product_price")
-    @NotNull
-    private Double product_price;
-
-    @Column(name = "product_gist")
-    private String product_brief;
-
-    @Column(name = "prod_desc")
-    @NotNull
-    private String prodDescription;
 }
