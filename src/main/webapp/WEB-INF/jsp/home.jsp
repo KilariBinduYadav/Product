@@ -23,7 +23,8 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5">Discover a variety of clothing with different fashions and styles you admire!</p>
-                        <a class="btn btn-primary btn-xl" href="/products">Get Started</a>
+                        <a class="btn btn-primary btn-xl" href="/products/M">Get Men Categories</a>
+                        <a class="btn btn-primary btn-xl" href="/products/W">Get Women Categories</a>
                     </div>
                 </div>
             </div>

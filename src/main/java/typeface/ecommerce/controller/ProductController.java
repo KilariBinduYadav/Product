@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import typeface.ecommerce.service.ProductsService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -22,13 +23,15 @@ public class ProductController {
         return "home";
     }
 
-    @RequestMapping("/products")
-    public ModelAndView showProductsPage() {
+    @RequestMapping("/products/{category}")
+    public ModelAndView showProductsPage(@PathVariable("category") String category) {
         ModelAndView mv = new ModelAndView("allProducts");
-        List<Products> productList = (List<Products>) productsService.getAllProduct();
-        mv.addObject("ProductsList", productList);
+        List<Products> category_list = productsService.getProductByCategory(category);
+        mv.addObject("ProductsList", category_list);
         return mv;
     }
+    
+   
 
     @RequestMapping("/products/{id}/description")
     private @NotNull ModelAndView getProductDescription(@PathVariable("id") int id) {

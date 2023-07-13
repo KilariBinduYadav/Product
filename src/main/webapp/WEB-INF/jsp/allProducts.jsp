@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,147 +20,27 @@
     <section style="background-color: #eee;">
         <div class="text-center container py-5">
             <h4 class="mt-4 mb-5" ><strong>Explore the Fashions Library!</strong></h4>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-12 mb-4">
-                    <div class="card h-100">
-                        <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
-                            data-mdb-ripple-color="light">
-                            <img src="/resources/img/Kurta_img_1.jpg"
-                                class="w-100" />
-                        </div>
-                        <div class="card-body">
-                             <h5 class="card-title mb-3">${ProductsList.get(0).product_name}</h5>
-                            <p>${ProductsList.get(0).product_brief}</p>
-                            <h6 class="mb-3">Rs: ${ProductsList.get(0).product_price}</h6>
-                            <a href="/products/${ProductsList.get(0).product_id}/description" class="text-reset">
-                                <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
-                            data-mdb-ripple-color="light">
-                            <img src="/resources/img/men_jeans.jpg"
-                                class="w-100" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">${ProductsList.get(1).product_name}</h5>
-                           <p>${ProductsList.get(1).product_brief}</p>
-                           <h6 class="mb-3">Rs: ${ProductsList.get(1).product_price}</h6>
-                           <a href="/products/${ProductsList.get(1).product_id}/description" class="text-reset">
-                               <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>
-                           </a>
-                       </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                            <img src="/resources/img/women_jeans.jpg"
-                                class="w-100" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">${ProductsList.get(2).product_name}</h5>
-                           <p>${ProductsList.get(2).product_brief}</p>
-                           <h6 class="mb-3">Rs: ${ProductsList.get(2).product_price}</h6>
-                           <a href="/products/${ProductsList.get(2).product_id}/description" class="text-reset">
-                               <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>
-                           </a>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                            <img src="/resources/img/women_top.jpg"
-                                class="w-100" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">${ProductsList.get(3).product_name}</h5>
-                           <p>${ProductsList.get(3).product_brief}</p>
-                           <h6 class="mb-3">Rs: ${ProductsList.get(3).product_price}</h6>
-                           <a href="/products/${ProductsList.get(3).product_id}/description" class="text-reset">
-                               <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>
-                           </a>
-                       </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-12 mb-4">
-                    <div class="card h-100">
-                        <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                            <img src="/resources/img/men_shirt.jpg"
-                                class="w-100" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">${ProductsList.get(4).product_name}</h5>
-                           <p>${ProductsList.get(4).product_brief}</p>
-                           <h6 class="mb-3">Rs: ${ProductsList.get(4).product_price}</h6>
-                           <a href="/products/${ProductsList.get(4).product_id}/description" class="text-reset">
-                               <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>
-                           </a>
-                       </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
-                            data-mdb-ripple-color="light">
-                            <img src="/resources/img/saree.jpg"
-                                class="w-100" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">${ProductsList.get(5).product_name}</h5>
-                           <p>${ProductsList.get(5).product_brief}</p>
-                           <h6 class="mb-3">Rs: ${ProductsList.get(5).product_price}</h6>
-                           <a href="/products/${ProductsList.get(5).product_id}/description" class="text-reset">
-                               <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>
-                           </a>
-                       </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                            <img src="/resources/img/shoe_img.jpg"
-                                class="w-100" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">${ProductsList.get(6).product_name}</h5>
-                           <p>${ProductsList.get(6).product_brief}</p>
-                           <h6 class="mb-3">Rs: ${ProductsList.get(6).product_price}</h6>
-                           <a href="/products/${ProductsList.get(6).product_id}/description" class="text-reset">
-                               <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>
-                           </a>
-                       </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
-                            <img src="/resources/img/perfume.jpg"
-                                class="w-100" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">${ProductsList.get(7).product_name}</h5>
-                            <p>${ProductsList.get(7).product_brief}</p>
-                            <h6 class="mb-3">Rs: ${ProductsList.get(7).product_price}</h6>
-                           <a href="/products/${ProductsList.get(7).product_id}/description" class="text-reset">
-                              <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>
-                           </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+	            <div class="row">
+	            <c:forEach items="${ProductsList}" var="product">
+	                <div class="col-lg-3 col-md-12 mb-4">
+	                    <a href="/products/${product.product_id}/description" class="text-reset">
+	                        <div class="card h-100">
+	                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+	                                data-mdb-ripple-color="light">
+	                                <img src="/resources/img/${product.product_id}.jpg"
+	                                    class="w-100" />
+	                            </div>
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">${product.product_name}</h5>
+                                    <p>${product.product_brief}</p>
+                                    <h6 class="mb-3">Rs: ${product.product_price}</h6>
+                                        <p style="color: rgb(255, 128, 0);"><b>View Details</b></p>   
+                                </div> 
+	                        </div>
+	                    </a>
+	                </div>
+	            </c:forEach>
+	        </div>
         </div>
     </section>
 </body>
